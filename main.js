@@ -1,0 +1,24 @@
+import { HTMLCanvas, XMLSVG } from './src/views/index.js';
+import Stage from './implementation/index.js';
+import package_json from './package.json' with { type: 'json' };
+import { userConfig } from './implementation/user-config.js';
+
+document.on('DOMContentLoaded', ()=>{
+
+    document.title = package_json.name;
+
+    const
+        stage = Stage.setup({HTMLCanvas, XMLSVG})  
+
+    window.on('resize', ()=>{
+
+            HTMLCanvas
+                .init({stage, container: document.getElementById(userConfig.canvas.stage.id)})
+                    .on( Stage.renderer.bind(null, {HTMLCanvas, XMLSVG}) );
+        
+    });
+
+    // DEV_NOTE (!) # This allows to initiate `<canvas>` hosted "bitmap" with internal context without waiting `window.onresize` to be triggered by end-user
+    window.dispatch( new Event('resize') );
+
+});

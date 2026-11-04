@@ -1,0 +1,12 @@
+{
+  "name": "rect.js",
+  "version": "1.0.0",
+  "description": "a stripped version of vekt.js|-light",
+  "keywords": [],
+  "author": "github:projektorius96",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
