@@ -1,6 +1,4 @@
-# Project name: **Vekt.js-light** (_a fork of **Vekt.js**_)
-
-> See current list of [Vekt.js|-light demos on YouTube](https://www.youtube.com/playlist?list=PL7JUsQnnxGCu1aze5meX8gP_K50ZcM9kC)
+# Project name: **Rect.js** (_a fork of **Vekt.js-light**_)
 
 ### Annotations
 
@@ -22,14 +20,12 @@
 
 1) Make sure you got the latest stable [`Node.js`](https://nodejs.org/en/download), as well as the dev dependency of [`Vite.js`](https://vite.dev/guide/); actually, if you install Node.js, clone this repo and run `npm ci` command on your active terminal - you're basically good to go!
 
-#### **REMARKS**:
-
-> **MOTTO**: _Apart the Canvas API (HTMLCanvas) offered responsive web experience primitive `stage.grid.GRIDCELL_DIM`, this wrapper (call it a library if you want) offers a "path-first" paradigm, which together with knowledge of Maths and a bit of JavaScript-ish mind, can offer a way to draw any shape just from single "path", however you're always welcome to monkey patch on top of it, and/or contribute towards a more eloquent approach!_
+#### **DRAWING SURFACE**:
 
 Most of the time you will be tinkering with the code under the following paths:
 
 - `<root>/implementation/user-config.js` that holds web application-level config;
-- `<root>/implementation/app/index.js` that holds to static calls:
+- `<root>/implementation/app/index.js` that holds two static calls:
   - the `setup` meant to register `svg-container`, under which the instance(s) of container-bound `svg-path`  will be nested;
   - the `renderer` does hold the `svg-path`(-s) (_see `drawPaths` in `/app/shapes/renderer.js`_) implementation (_each "shape" implementation is defined under `/app/shapes/`_) respectively;
 
